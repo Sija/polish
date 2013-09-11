@@ -6,9 +6,9 @@ pl:
       long: "%e %B %Y"
 
     order:
-      - !ruby/sym day
-      - !ruby/sym month
-      - !ruby/sym year
+      - :day
+      - :month
+      - :year
 
   time:
     formats:
