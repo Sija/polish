@@ -1,5 +1,5 @@
 # Polish
-[![travis-ci](http://travis-ci.org/grk/polish.png)](http://travis-ci.org/grk/polish) [![stillmaintained](http://stillmaintained.com/grk/polish.png)](http://stillmaintained.com/grk/polish)
+[![travis-ci](https://travis-ci.org/Sija/polish.png)](https://travis-ci.org/Sija/polish) [![stillmaintained](http://stillmaintained.com/Sija/polish.png)](http://stillmaintained.com/Sija/polish)
 
 Polish language support for Ruby on Rails.
 
@@ -13,7 +13,7 @@ Install
 
 To add Polish to your Rails app, simply add it to your Gemfile:
 
-`gem "polish", ">= 0.1.0"`
+`gem 'polish', github: 'Sija/polish'`
 
 Additionally, if you change the backend of I18n, you will need to make sure it includes the Pluralization module:
 
