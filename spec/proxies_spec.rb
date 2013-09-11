@@ -4,7 +4,7 @@ require File.dirname(__FILE__) + '/spec_helper'
 
 describe "with localize proxy" do
   before(:each) do
-    @time = mock(:time)
+    @time = double(:time)
     @options = { :format => "%d %B %Y" }
   end
 
@@ -32,7 +32,7 @@ end
 
 describe "strftime" do
   before(:each) do
-    @time = mock(:time)
+    @time = double(:time)
   end
 
   it "should call localize with object and format" do
