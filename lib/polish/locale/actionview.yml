@@ -34,6 +34,15 @@ pl:
           mb: "MB"
           gb: "GB"
           tb: "TB"
+      decimal_units:
+        format: "%n %u"
+        units:
+          unit: ""
+          thousand:    "tysiąc"
+          million:     "milion"
+          billion:     "biliard"
+          trillion:    "bilion"
+          quadrillion: "biliard"
 
   datetime:
     distance_in_words:
@@ -72,17 +81,21 @@ pl:
         other: "%{count} miesięcy"
       about_x_years:
         one:   "około roku"
-        few:   "około %{count} lat"
+        few:   "około %{count} lata"
         other: "około %{count} lat"
       over_x_years:
         one:   "ponad rok"
         few:   "ponad %{count} lata"
         other: "ponad %{count} lat"
+      almost_x_years:
+        one:   "prawie rok"
+        few:   "prawie %{count} lata"
+        other: "prawie %{count} lat"
     prompts:
-      year: "Rok"
-      month: "Miesiąc"
-      day: "Dzień"
-      hour: "Godzina"
+      year:   "Rok"
+      month:  "Miesiąc"
+      day:    "Dzień"
+      hour:   "Godzina"
       minute: "Minuta"
       second: "Sekunda"
 
@@ -92,9 +105,9 @@ pl:
       prompt: "Proszę wybrać"
 
     submit:
-      create: 'Utwórz %{model}'
-      update: 'Aktualizuj %{model}'
-      submit: 'Zapisz %{model}'
+      create: "Utwórz %{model}"
+      update: "Aktualizuj %{model}"
+      submit: "Zapisz %{model}"
 
   attributes:
     created_at: "Czas utworzenia"

@@ -61,6 +61,7 @@ describe Polish, "loading locales" do
     number.human.format.delimiter
     number.human.format.precision
     number.human.storage_units
+    number.human.decimal_units
 
     datetime.distance_in_words.half_a_minute
     datetime.distance_in_words.less_than_x_seconds
@@ -73,6 +74,7 @@ describe Polish, "loading locales" do
     datetime.distance_in_words.x_months
     datetime.distance_in_words.about_x_years
     datetime.distance_in_words.over_x_years
+    datetime.distance_in_words.almost_x_years
 
     datetime.prompts.year
     datetime.prompts.month
