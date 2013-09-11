@@ -26,11 +26,19 @@ module Polish
     LOCALE
   end
 
+  # Regexp machers for context-based month names and day names translation
+  LOCALIZE_STANDALONE_ABBR_DAY_NAMES_MATCH = /^%a/
+  LOCALIZE_STANDALONE_DAY_NAMES_MATCH = /^%A/
+  LOCALIZE_ABBR_MONTH_NAMES_MATCH = /(%[-\d]?d|%e)(.*)(%b)/
+  LOCALIZE_MONTH_NAMES_MATCH = /(%[-\d]?d|%e)(.*)(%B)/
+
   # Init Polish i18n: set custom backend,
   # load all translations shipped with library.
   def init_i18n
     I18n.backend.class.send(:include, I18n::Backend::Pluralization)
     I18n.load_path.unshift(*locale_files)
+
+    I18n.reload!
   end
 
   protected

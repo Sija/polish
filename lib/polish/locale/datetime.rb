@@ -3,40 +3,32 @@
 {
   :pl => {
     :date => {
-      :month_names => lambda { |date_or_time, opts|
-        if opts[:format] =~ /(%d|%e)(.*)(%B)/
-          [nil, 'stycznia', 'lutego', 'marca', 'kwietnia', 'maja', 'czerwca', 
-           'lipca', 'sierpnia', 'września', 'października', 'listopada', 
-           'grudnia']
+      :abbr_day_names => lambda { |key, options|
+        if options[:format] =~ Polish::LOCALIZE_STANDALONE_ABBR_DAY_NAMES_MATCH
+          :'date.standalone_abbr_day_names'
         else
-          [nil, 'Styczeń', 'Luty', 'Marzec', 'Kwiecień', 'Maj', 'Czerwiec', 
-           'Lipiec', 'Sierpień', 'Wrzesień', 'Październik', 'Listopad', 
-           'Grudzień']
+          :'date.common_abbr_day_names'
         end
       },
-      :abbr_month_names => lambda { |date_or_time, opts|
-        if opts[:format] =~ /(%d|%e)(.*)(%b)/
-          [nil, 'sty.', 'lut.', 'mar.', 'kwi.', 'maj.', 'cze.', 'lip.', 'sie.', 
-           'wrz.', 'paź.', 'lis.', 'gru.']
+      :day_names => lambda { |key, options|
+        if options[:format] =~ Polish::LOCALIZE_STANDALONE_DAY_NAMES_MATCH
+          :'date.standalone_day_names'
         else
-          [nil, 'Sty.', 'Lut.', 'Mar.', 'Kwi.', 'Maj', 'Cze.', 'Lip.', 'Sie.', 
-           'Wrz.', 'Paź.', 'Lis.', 'Gru.']
+          :'date.common_day_names'
         end
       },
-      :day_names => lambda { |date_or_time, opts|
-        if opts[:format] =~ /^%A/
-          ['Niedziela', 'Poniedziałek', 'Wtorek', 'Środa', 'Czwartek', 
-           'Piątek', 'Sobota']
+      :abbr_month_names => lambda { |key, options|
+        if options[:format] =~ Polish::LOCALIZE_ABBR_MONTH_NAMES_MATCH
+          :'date.common_abbr_month_names'
         else
-          ['niedziela', 'poniedziałek', 'wtorek', 'środa', 'czwartek', 
-           'piątek', 'sobota']
+          :'date.standalone_abbr_month_names'
         end
       },
-      :abbr_day_names => lambda { |date_or_time, opts|
-        if opts[:format] =~ /^%a/
-          ['Niedz.', 'Pon.', 'Wt.', 'Śr.', 'Czw.', 'Pt.', 'Sob.']
+      :month_names => lambda { |key, options|
+        if options[:format] =~ Polish::LOCALIZE_MONTH_NAMES_MATCH
+          :'date.common_month_names'
         else
-          ['niedz.', 'pon.', 'wt.', 'śr.', 'czw.', 'pt.', 'sob.']
+          :'date.standalone_month_names'
         end
       }
     }
