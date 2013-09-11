@@ -54,40 +54,36 @@ if defined?(ActionView::Helpers::DateTimeSelector) && ActionView::Helpers::DateT
       end
       
       class DateTimeSelector #:nodoc:
-        private
-          # Returns translated month names
-          #  => [nil, "January", "February", "March",
-          #           "April", "May", "June", "July",
-          #           "August", "September", "October",
-          #           "November", "December"]
-          #
-          # If :use_short_month option is set
-          #  => [nil, "Jan", "Feb", "Mar", "Apr", "May", "Jun",
-          #           "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"]
-          #
-          # Also looks up if <tt>:discard_day</tt> or <tt>:use_standalone_month_names</tt> option is set
-          # and uses i18n standalone month names if so.
-          #
-          def translated_month_names
-            begin
-              if @options[:use_short_month]
-                if (@options[:discard_day] || @options[:use_standalone_month_names]) && I18n.translate(:'date.standalone_abbr_month_names')
-                  key = :'date.standalone_abbr_month_names'
-                else
-                  key = :'date.abbr_month_names'
-                end
-              else
-                if (@options[:discard_day] || @options[:use_standalone_month_names]) && I18n.translate(:'date.standalone_month_names')
-                  key = :'date.standalone_month_names'
-                else
-                  key = :'date.month_names'
-                end
-              end
-              
-              I18n.translate(key, :locale => @options[:locale])
+      private
+        # Returns translated month names
+        #  => [nil, "January", "February", "March",
+        #           "April", "May", "June", "July",
+        #           "August", "September", "October",
+        #           "November", "December"]
+        #
+        # If :use_short_month option is set
+        #  => [nil, "Jan", "Feb", "Mar", "Apr", "May", "Jun",
+        #           "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"]
+        #
+        # Also looks up if <tt>:discard_day</tt> or <tt>:use_standalone_month_names</tt> option is set
+        # and uses i18n standalone month names if so.
+        #
+        def translated_month_names
+          if @options[:use_short_month]
+            if (@options[:discard_day] || @options[:use_standalone_month_names]) && I18n.translate(:'date.standalone_abbr_month_names')
+              key = :'date.standalone_abbr_month_names'
+            else
+              key = :'date.abbr_month_names'
+            end
+          else
+            if (@options[:discard_day] || @options[:use_standalone_month_names]) && I18n.translate(:'date.standalone_month_names')
+              key = :'date.standalone_month_names'
+            else
+              key = :'date.month_names'
             end
           end
-          
+          I18n.translate(key, :locale => @options[:locale])
+        end
       end
     end
   end
