@@ -26,7 +26,6 @@ describe Polish do
 
     after(:all) do
       Polish.init_i18n
-      I18n.reload!
     end
 
     it "should extend the backend with I18n::Backend::Pluralization" do
@@ -36,14 +35,12 @@ describe Polish do
     it "should keep existing translations while switching backends" do
       I18n.load_path << File.join(File.dirname(__FILE__), 'fixtures', 'en.yml')
       Polish.init_i18n
-      I18n.reload!
       I18n.t(:foo, :locale => :en).should == "bar"
     end
 
     it "should keep existing :pl translations while switching backends" do
       I18n.load_path << File.join(File.dirname(__FILE__), 'fixtures', 'pl.yml')
       Polish.init_i18n
-      I18n.reload!
       I18n.t(:'date.formats.default', :locale => :pl).should == "override"
     end
 
