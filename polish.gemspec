@@ -12,7 +12,7 @@ Gem::Specification.new do |s|
 
   s.authors = ["Grzesiek Kolodziejczyk"]
   s.email = %q{gkolodziejczyk@gmail.com}
-  s.homepage = %q{http://github.com/grk/polish}
+  s.homepage = %q{http://github.com/Sija/polish}
 
   s.files         = `git ls-files`.split("\n")
   s.test_files    = `git ls-files -- {test,spec,features}/*`.split("\n")
