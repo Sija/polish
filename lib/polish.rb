@@ -19,7 +19,7 @@ module Polish
   extend self
 
   # Polish locale
-  LOCALE = :'pl'
+  LOCALE = :pl
 
   # Polish locale
   def locale

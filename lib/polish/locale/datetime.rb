@@ -1,7 +1,7 @@
 # -*- encoding: utf-8 -*- 
 
 {
-  :'pl' => {
+  :pl => {
     :date => {
       :month_names => lambda { |date_or_time, opts|
         if opts[:format] =~ /(%d|%e)(.*)(%B)/

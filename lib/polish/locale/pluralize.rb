@@ -1,7 +1,7 @@
 # -*- encoding: utf-8 -*- 
 
 {
-  :'pl' => {
+  :pl => {
     :i18n => {
       :plural => {
         :rule => lambda { |n| 
