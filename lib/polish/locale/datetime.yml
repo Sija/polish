@@ -2,8 +2,8 @@ pl:
   date:
     formats:
       default: "%d.%m.%Y"
-      short: "%e %b"
-      long: "%e %B %Y"
+      short:   "%e %b"
+      long:    "%e %B %Y"
 
     order:
       - :day
@@ -13,7 +13,7 @@ pl:
   time:
     formats:
       default: "%a, %e %B %Y, %H:%M:%S"
-      short: "%e %b, %H:%M"
-      long: "%e %B %Y, %H:%M"
+      short:   "%e %b, %H:%M"
+      long:    "%e %B %Y, %H:%M"
     am: "przed południem"
     pm: "po południu"
