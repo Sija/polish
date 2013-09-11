@@ -126,9 +126,6 @@ describe Polish, "loading locales" do
   end
 
   %w(
-    support.array.sentence_connector
-    support.array.skip_last_comma
-
     support.array.words_connector
     support.array.two_words_connector
     support.array.last_word_connector
