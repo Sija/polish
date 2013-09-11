@@ -1,5 +1,5 @@
 pkg/*
-polish.xcworkspace
+tmp
 *.gem
 .bundle
 Gemfile.lock
