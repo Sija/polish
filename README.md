@@ -1,5 +1,4 @@
-# Polish
-[![travis-ci](https://travis-ci.org/Sija/polish.png)](https://travis-ci.org/Sija/polish) [![stillmaintained](http://stillmaintained.com/Sija/polish.png)](http://stillmaintained.com/Sija/polish)
+# Polish [![travis-ci](https://travis-ci.org/Sija/polish.png)](https://travis-ci.org/Sija/polish)
 
 Polish language support for Ruby on Rails.
 
