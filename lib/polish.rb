@@ -18,6 +18,24 @@ require 'polish/proxies'
 module Polish
   extend self
 
+  begin
+    require 'i18n-js'
+
+    if defined? ::Rails::Engine
+      # auto wire assets as Rails Engine
+      class Rails < ::Rails::Engine
+      end
+
+    elsif defined? ::Sprockets
+      root_dir = File.expand_path '../..', __FILE__
+
+      # Set up asset paths for Sprockets apps
+      ::Sprockets.append_path File.join(root_dir, 'lib', 'assets', 'javascripts')
+    end
+  rescue
+    # No i18n-js gem found
+  end
+
   # Polish locale
   LOCALE = :pl
 
