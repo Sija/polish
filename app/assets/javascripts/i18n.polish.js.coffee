@@ -24,5 +24,5 @@
         when 0 then ['zero', 'other']
         when 1 then ['one']
         else
-          if count % 10 in [2..4] and count % 100 not in [12..14] then ['few', 'other']
+          if Math.abs(count) % 10 in [2..4] and Math.abs(count) % 100 not in [12..14] then ['few', 'other']
           else ['other']
